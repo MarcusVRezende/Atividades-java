@@ -26,6 +26,7 @@ public class ResultadoEscolar {
         }
 
         //função ternaria
+
         // String resultado = nota >= 7 ? "aprovado" : "reprovado";
     }
     
