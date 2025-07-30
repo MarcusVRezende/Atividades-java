@@ -1,27 +1,35 @@
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class TryCatch {
     public static void main(String[] args) {
-        
-        //Criando objeto Scanner
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-        
 
-        System.err.println("Digite seu Primeiro nome:");
-        String nome = scanner.next();
+        // Criando objeto Scanner
+       
+        try {
+            
+            Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.err.println("Digite seu Sobrenome:");
-        String sobrenome = scanner.next();
+            System.err.println("Digite seu Primeiro nome:");
+            String nome = scanner.next();
 
-        System.out.println("Digite Sua Idade:");
-        double idade = scanner.nextInt();
+            System.err.println("Digite seu Sobrenome:");
+            String sobrenome = scanner.next();
 
-        System.out.println("Digite Sua Altura:");
-        double altura = scanner.nextDouble();
+            System.out.println("Digite Sua Idade:");
+            double idade = scanner.nextInt();
 
-        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
-        System.err.println("tenho " + idade + " Anos");
-        System.err.println("Minha Altura é " + altura +"cm ");
-}
+            System.out.println("Digite Sua Altura:");
+            double altura = scanner.nextDouble();
+
+            System.out.println("Ola, me chamo " + nome + " " + sobrenome);
+            System.err.println("tenho " + idade + " Anos");
+            System.err.println("Minha Altura é " + altura + "cm ");
+        }catch(InputMismatchException e ) {
+            
+            System.err.println("O campo idade e altura precism ser numericos");
+            
+        } 
+    }
 }
